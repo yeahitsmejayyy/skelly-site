@@ -17,50 +17,50 @@ export default function Benefits1() {
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-3 gap-y-12">
-                    <div className="flex flex-col lg:gap-y-6 gap-y-12">
+                <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-3 gap-y-10">
+                    <div className="flex flex-col lg:gap-y-6 gap-y-10">
                         <div className="flex items-start gap-x-2">
                             <Check size={'20'} className="shrink-0" />
                             <div className="flex flex-col gap-y-1">
                                 <p className="font-bold">Benefit driven feature title</p>
-                                <p>Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
+                                <p className="text-muted-foreground">Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-x-2">
                             <Check size={'20'} className="shrink-0" />
                             <div className="flex flex-col gap-y-1">
                                 <p className="font-bold">Benefit driven feature title</p>
-                                <p>Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
+                                <p className="text-muted-foreground">Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-x-2">
                             <Check size={'20'} className="shrink-0" />
                             <div className="flex flex-col gap-y-1">
                                 <p className="font-bold">Benefit driven feature title</p>
-                                <p>Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
+                                <p className="text-muted-foreground">Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:gap-y-6 gap-y-12">
+                    <div className="flex flex-col lg:gap-y-6 gap-y-10">
                         <div className="flex items-start gap-x-2">
                             <Check size={'20'} className="shrink-0" />
                             <div className="flex flex-col gap-y-1">
                                 <p className="font-bold">Benefit driven feature title</p>
-                                <p>Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
+                                <p className="text-muted-foreground">Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-x-2">
                             <Check size={'20'} className="shrink-0" />
                             <div className="flex flex-col gap-y-1">
                                 <p className="font-bold">Benefit driven feature title</p>
-                                <p>Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
+                                <p className="text-muted-foreground">Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-x-2">
                             <Check size={'20'} className="shrink-0" />
                             <div className="flex flex-col gap-y-1">
                                 <p className="font-bold">Benefit driven feature title</p>
-                                <p>Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
+                                <p className="text-muted-foreground">Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.</p>
                             </div>
                         </div>
                     </div>

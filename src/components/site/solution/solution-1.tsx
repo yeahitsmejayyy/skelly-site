@@ -11,7 +11,7 @@ export default function Solution1() {
         <div className="w-full flex items-center justify-center border">
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-30 gap-y-[48px] w-325 lg:py-50 py-30 lg:px-0 px-12">
                 <div className="rounded-lg order-2">
-                    <img alt="Placeholder Image" src={'/ar1by1-placeholder.png'} className="rounded-lg" />
+                    <img alt="Placeholder Image" src={'/square-placeholder.png'} className="rounded-lg" />
                 </div>
 
                 <div className="order-2 flex flex-col justify-center lg:gap-y-[24px] gap-y-[24px]">

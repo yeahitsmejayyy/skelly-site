@@ -28,7 +28,7 @@ export default function Problem1() {
                 </div>
 
                 <div className="rounded-lg">
-                    <img alt="Placeholder Image" src={'/ar1by1-placeholder.png'} className="rounded-lg" />
+                    <img alt="Placeholder Image" src={'/square-placeholder.png'} className="rounded-lg" />
                 </div>
             </div>
         </div>
