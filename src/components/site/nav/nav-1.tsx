@@ -12,8 +12,9 @@ export default function Nav1() {
         <div className="sticky lg:top-4 top-0 w-full h-16.25 max-w-215 mx-auto px-5 flex items-center justify-between border lg:rounded-lg bg-background lg:shadow-md">
             <div className="flex items-center gap-1">
                 <div className="flex items-center gap-x-1">
-                    <span>💀</span>
-                    <span className="font-bold lg:block hidden">@skelly/site</span>
+                    <span className="w-[30px] h-[30px] flex items-center justify-center bg-neutral-950 dark:bg-neutral-900 rounded-md">💀</span>
+                    {/* optional: typelogo */}
+                    {/* <span className="font-bold lg:block hidden">@skelly/site</span> */}
                 </div>
             </div>
 
