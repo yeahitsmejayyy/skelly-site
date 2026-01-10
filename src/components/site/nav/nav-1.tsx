@@ -9,10 +9,12 @@ import { Menu } from "lucide-react";
 // props: Nav1Props 
 export default function Nav1() {
     return (
-        <div className="sticky lg:top-4 top-0 w-full h-16.25 max-w-215 mx-auto px-5 flex items-center justify-between border lg:rounded-lg bg-background lg:shadow-md">
+        <div className="fixed right-0 left-0 lg:top-4 top-0 w-full h-16.25 max-w-215 mx-auto px-5 flex items-center justify-between bg-background/60 backdrop-blur-md backdrop-saturate-150
+border border-border/50
+lg:rounded-lg lg:shadow-lg">
             <div className="flex items-center gap-1">
                 <div className="flex items-center gap-x-1">
-                    <span className="w-[30px] h-[30px] flex items-center justify-center bg-neutral-950 dark:bg-neutral-900 rounded-md">💀</span>
+                    <span className="w-7.5 h-7.5 flex items-center justify-center bg-neutral-950 dark:bg-neutral-900 rounded-md">💀</span>
                     {/* optional: typelogo */}
                     {/* <span className="font-bold lg:block hidden">@skelly/site</span> */}
                 </div>
