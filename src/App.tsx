@@ -1,3 +1,4 @@
+import { ModeToggle } from "./components/mode-toggle"
 import Benefits1 from "./components/site/benefits/benefits-1"
 import Comparison1 from "./components/site/comparison/comparison-1"
 import FAQ1 from "./components/site/faq/faq-1"
@@ -15,6 +16,7 @@ import WhoItsFor1 from "./components/site/who-its-for/who-its-for-1"
 function App() {
   return (
     <>
+      <div className="absolute top-4 right-4"><ModeToggle /></div>
       <Hero1 />
       <Problem1 />
       <Solution1 />
