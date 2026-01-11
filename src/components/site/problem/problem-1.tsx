@@ -9,7 +9,7 @@ import { ArrowRight, Check } from "lucide-react";
 export default function Problem1() {
     return (
         <div className="w-full flex items-center justify-center border">
-            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-14 gap-y-[48px] w-325 lg:py-50 py-30 lg:px-0 px-12">
+            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-14 gap-y-[48px] w-325 lg:py-50 py-30 lg:px-0 px-6">
                 <div className="flex flex-col justify-center lg:gap-y-[24px] gap-y-[24px]">
                     <p className="text-muted-foreground lg:text-[14px]">Hero Section</p>
                     <h1 className="lg:text-[38px] text-[30px] font-bold lg:leading-11 leading-8">Headline that shows problem impact on user success</h1>

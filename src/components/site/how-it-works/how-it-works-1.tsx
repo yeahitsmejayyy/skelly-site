@@ -4,7 +4,7 @@
 // props: HowItWorks1Props 
 export default function HowItWorks1() {
     return (
-        <div className="w-full border flex flex-col gap-y-10 items-center justify-center lg:py-50 py-30 lg:px-0 px-12">
+        <div className="w-full border flex flex-col gap-y-10 items-center justify-center lg:py-50 py-30 lg:px-0 px-6">
             <div className="w-full lg:max-w-150 flex flex-col gap-y-5 text-center mx-auto">
                 <p className="text-muted-foreground lg:text-[14px]">Hero Section</p>
                 <h1 className="lg:text-[38px] text-[30px] font-bold lg:leading-11 leading-8">Headline that shows how it works for user success</h1>

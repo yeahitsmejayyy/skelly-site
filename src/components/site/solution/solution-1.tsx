@@ -9,7 +9,7 @@ import { ArrowRight, Check } from "lucide-react";
 export default function Solution1() {
     return (
         <div className="w-full flex items-center justify-center border">
-            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-30 gap-y-[48px] w-325 lg:py-50 py-30 lg:px-0 px-12">
+            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-30 gap-y-[48px] w-325 lg:py-50 py-30 lg:px-0 px-6">
                 <div className="rounded-lg order-2">
                     <img alt="Placeholder Image" src={'/square-placeholder.png'} className="rounded-lg" />
                 </div>
