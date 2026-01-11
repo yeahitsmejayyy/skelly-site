@@ -53,8 +53,8 @@ export default function Footer1() {
             <div className="lg:w-325 w-full flex lg:flex-row flex-col lg:gap-y-0 gap-y-8 items-center justify-between">
                 <p className="text-muted-foreground lg:order-1 order-2">Copyright &copy; 2026 skellyui.com All rights reserved</p>
                 <div className="flex lg:flex-row flex-col items-center lg:gap-x-8 gap-y-4 lg:order-2 order-1">
-                    <a href="#" className="text-muted-foreground">Privacy Policy</a>
-                    <a href="#" className="text-muted-foreground">Terms of Service</a>
+                    <a href="/privacy" className="text-muted-foreground">Privacy Policy</a>
+                    <a href="/terms" className="text-muted-foreground">Terms of Service</a>
                     <a href="#" className="text-muted-foreground">Cookies Settings</a>
                 </div>
             </div>
