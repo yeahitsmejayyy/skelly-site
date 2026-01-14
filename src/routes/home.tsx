@@ -5,8 +5,6 @@ import FAQ1 from "@/components/site/faq/faq-1"
 import Footer1 from "@/components/site/footer/footer-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 import Pricing1 from "@/components/site/pricing/pricing-1"
-import SocialProof1 from "@/components/site/social-proof/social-proof-1"
-import WhoItsFor1 from "@/components/site/who-its-for/who-its-for-1"
 
 // interface HomeProps {
 //   // define props here
@@ -235,8 +233,78 @@ export default function Home() {
                 }}
             />
 
-            <WhoItsFor1 />
-            <SocialProof1 />
+            <Section
+                type="who-its-for"
+                variant="1"
+                data={{
+                    eyebrow: "Who It’s For",
+                    headline: "Headline that shows who it's for and the user success",
+                    description:
+                        "Explain in one or two concise sentences how your solution transforms users' challenges into positive outcomes.",
+                    primaryCta: {
+                        label: "Get access",
+                        href: "/signup",
+                    },
+                    secondaryCta: {
+                        label: "Learn more",
+                        href: "#features",
+                    },
+                    image: {
+                        src: "/square-placeholder.png",
+                        alt: "Target audience illustration",
+                    },
+                }}
+            />
+
+            <Section
+                type="social-proof"
+                variant="1"
+                data={{
+                    eyebrow: "Testimonials",
+                    headline: "Headline that shows testimonials for user success",
+                    description:
+                        "Write a brief introduction that sets up your testimonials' credibility.",
+                    testimonials: [
+                        {
+                            quote:
+                                "Shadcn UI Kit for Figma has completely transformed our design process. It’s incredibly intuitive and saves us so much time.",
+                            author: {
+                                name: "Jack Bauer",
+                                title: "Founder at Acme Inc",
+                                avatar: {
+                                    src: "/avatar.png",
+                                    alt: "Jack Bauer",
+                                },
+                            },
+                        },
+                        {
+                            quote:
+                                "The components are beautifully crafted and incredibly easy to customize. It’s become a core part of our workflow.",
+                            author: {
+                                name: "Jack Bauer",
+                                title: "Founder at Acme Inc",
+                                avatar: {
+                                    src: "/avatar.png",
+                                    alt: "Jack Bauer",
+                                },
+                            },
+                        },
+                        {
+                            quote:
+                                "We ship faster and with more confidence thanks to this system. It’s a huge productivity win.",
+                            author: {
+                                name: "Jack Bauer",
+                                title: "Founder at Acme Inc",
+                                avatar: {
+                                    src: "/avatar.png",
+                                    alt: "Jack Bauer",
+                                },
+                            },
+                        },
+                    ],
+                }}
+            />
+
             <Comparison1 />
             <Pricing1 />
             <FAQ1 />

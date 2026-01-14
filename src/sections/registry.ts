@@ -21,6 +21,12 @@ import type { HowItWorksData } from "@/sections/types/how-it-works"
 import Features1 from "@/components/site/features/features-1"
 import type { FeaturesData } from "@/sections/types/features"
 
+import WhoItsFor1 from "@/components/site/who-its-for/who-its-for-1"
+import type { WhoItsForData } from "@/sections/types/who-its-for"
+
+import SocialProof1 from "@/components/site/social-proof/social-proof-1"
+import type { SocialProofData } from "@/sections/types/social-proof"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -42,5 +48,11 @@ export const sectionRegistry = {
     },
     features: {
         "1": Features1 satisfies SectionRenderer<FeaturesData>,
+    },
+    "who-its-for": {
+        "1": WhoItsFor1 satisfies SectionRenderer<WhoItsForData>,
+    },
+    "social-proof": {
+        "1": SocialProof1 satisfies SectionRenderer<SocialProofData>,
     },
 } as const
