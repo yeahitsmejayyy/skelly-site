@@ -1,10 +1,10 @@
 import { Seo } from "@/seo/seo"
+import { Section } from "@/sections/section"
 import Benefits1 from "@/components/site/benefits/benefits-1"
 import Comparison1 from "@/components/site/comparison/comparison-1"
 import FAQ1 from "@/components/site/faq/faq-1"
 import Features1 from "@/components/site/features/features-1"
 import Footer1 from "@/components/site/footer/footer-1"
-import Hero1 from "@/components/site/hero/hero-1"
 import HowItWorks1 from "@/components/site/how-it-works/how-it-works-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 import Nav1 from "@/components/site/nav/nav-1"
@@ -26,7 +26,21 @@ export default function Home() {
                 description="Home page..."
             />
             <Nav1 />
-            <Hero1 />
+            <Section
+                type="hero"
+                variant="1"
+                data={{
+                    eyebrow: "Hero Section",
+                    headline: "Headline that solves user's main problem",
+                    description:
+                        "Follow with one or two sentences that expand on your value proposition. Focus on key benefits and address why users should take action now.",
+                    cta: {
+                        label: "Get access",
+                        href: "/signup",
+                    },
+                }}
+            />
+
             <Problem1 />
             <Solution1 />
             <Benefits1 />
