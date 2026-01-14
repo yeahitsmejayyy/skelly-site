@@ -7,7 +7,6 @@ import Features1 from "@/components/site/features/features-1"
 import Footer1 from "@/components/site/footer/footer-1"
 import HowItWorks1 from "@/components/site/how-it-works/how-it-works-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
-import Nav1 from "@/components/site/nav/nav-1"
 import Pricing1 from "@/components/site/pricing/pricing-1"
 import Problem1 from "@/components/site/problem/problem-1"
 import SocialProof1 from "@/components/site/social-proof/social-proof-1"
@@ -25,7 +24,27 @@ export default function Home() {
                 title="Home"
                 description="Home page..."
             />
-            <Nav1 />
+            <Section
+                type="nav"
+                variant="1"
+                data={{
+                    brand: {
+                        icon: "💀",
+                        label: "@skelly/site",
+                        href: "/",
+                    },
+                    links: [
+                        { label: "How It Works", href: "#how-it-works" },
+                        { label: "Features", href: "#features" },
+                        { label: "Pricing", href: "#pricing" },
+                    ],
+                    cta: {
+                        label: "Get Started",
+                        href: "/signup",
+                    },
+                }}
+            />
+
             <Section
                 type="hero"
                 variant="1"
