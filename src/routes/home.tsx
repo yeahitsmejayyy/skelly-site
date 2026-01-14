@@ -1,6 +1,5 @@
 import { Seo } from "@/seo/seo"
 import { Section } from "@/sections/section"
-import Benefits1 from "@/components/site/benefits/benefits-1"
 import Comparison1 from "@/components/site/comparison/comparison-1"
 import FAQ1 from "@/components/site/faq/faq-1"
 import Features1 from "@/components/site/features/features-1"
@@ -114,7 +113,49 @@ export default function Home() {
                 }}
             />
 
-            <Benefits1 />
+            <Section
+                type="benefits"
+                variant="1"
+                data={{
+                    eyebrow: "Benefits",
+                    headline: "Headline that shows benefits impact on user success",
+                    description:
+                        "Explain in one or two concise sentences how your solution transforms users' challenges into positive outcomes.",
+                    items: [
+                        {
+                            title: "Benefit driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            title: "Benefit driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            title: "Benefit driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            title: "Benefit driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            title: "Benefit driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            title: "Benefit driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                    ],
+                }}
+            />
+
             <HowItWorks1 />
             <Features1 />
             <WhoItsFor1 />
