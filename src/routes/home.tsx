@@ -9,7 +9,6 @@ import HowItWorks1 from "@/components/site/how-it-works/how-it-works-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 import Pricing1 from "@/components/site/pricing/pricing-1"
 import SocialProof1 from "@/components/site/social-proof/social-proof-1"
-import Solution1 from "@/components/site/solution/solution-1"
 import WhoItsFor1 from "@/components/site/who-its-for/who-its-for-1"
 
 // interface HomeProps {
@@ -87,7 +86,34 @@ export default function Home() {
                 }}
             />
 
-            <Solution1 />
+            <Section
+                type="solution"
+                variant="1"
+                data={{
+                    eyebrow: "The Solution",
+                    headline: "Headline that shows solution's impact on user success",
+                    description:
+                        "Explain in one or two concise sentences how your solution transforms users' challenges into positive outcomes.",
+                    bullets: [
+                        "Solution driven feature title",
+                        "Solution driven feature title",
+                        "Solution driven feature title",
+                    ],
+                    primaryCta: {
+                        label: "Get access",
+                        href: "/signup",
+                    },
+                    secondaryCta: {
+                        label: "Learn more",
+                        href: "#features",
+                    },
+                    image: {
+                        src: "/square-placeholder.png",
+                        alt: "Product screenshot",
+                    },
+                }}
+            />
+
             <Benefits1 />
             <HowItWorks1 />
             <Features1 />

@@ -9,6 +9,9 @@ import type { HeroData } from "@/sections/types/hero"
 import Problem1 from "@/components/site/problem/problem-1"
 import type { ProblemData } from "@/sections/types/problem"
 
+import Solution1 from "@/components/site/solution/solution-1"
+import type { SolutionData } from "@/sections/types/solution"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -18,5 +21,8 @@ export const sectionRegistry = {
     },
     problem: {
         "1": Problem1 satisfies SectionRenderer<ProblemData>,
+    },
+    solution: {
+        "1": Solution1 satisfies SectionRenderer<SolutionData>,
     },
 } as const
