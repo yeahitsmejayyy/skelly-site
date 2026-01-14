@@ -18,6 +18,9 @@ import type { BenefitsData } from "@/sections/types/benefits"
 import HowItWorks1 from "@/components/site/how-it-works/how-it-works-1"
 import type { HowItWorksData } from "@/sections/types/how-it-works"
 
+import Features1 from "@/components/site/features/features-1"
+import type { FeaturesData } from "@/sections/types/features"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -36,5 +39,8 @@ export const sectionRegistry = {
     },
     "how-it-works": {
         "1": HowItWorks1 satisfies SectionRenderer<HowItWorksData>,
+    },
+    features: {
+        "1": Features1 satisfies SectionRenderer<FeaturesData>,
     },
 } as const

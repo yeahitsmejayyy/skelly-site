@@ -2,7 +2,6 @@ import { Seo } from "@/seo/seo"
 import { Section } from "@/sections/section"
 import Comparison1 from "@/components/site/comparison/comparison-1"
 import FAQ1 from "@/components/site/faq/faq-1"
-import Features1 from "@/components/site/features/features-1"
 import Footer1 from "@/components/site/footer/footer-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 import Pricing1 from "@/components/site/pricing/pricing-1"
@@ -195,7 +194,47 @@ export default function Home() {
                 }}
             />
 
-            <Features1 />
+            <Section
+                type="features"
+                variant="1"
+                data={{
+                    eyebrow: "Features",
+                    headline: "Headline that shows features impact on user success",
+                    description:
+                        "Explain in one or two concise sentences how your solution transforms users' challenges into positive outcomes.",
+                    features: [
+                        {
+                            icon: "rocket",
+                            title: "Feature driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            icon: "rocket",
+                            title: "Feature driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            icon: "rocket",
+                            title: "Feature driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                        {
+                            icon: "rocket",
+                            title: "Feature driven feature title",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                        },
+                    ],
+                    image: {
+                        src: "/tall-rectangle-placeholder.png",
+                        alt: "Product screenshot",
+                    },
+                }}
+            />
+
             <WhoItsFor1 />
             <SocialProof1 />
             <Comparison1 />
