@@ -1,169 +1,129 @@
-// interface Comparison1Props {
-//   // define props here
-// }
+import type { ComparisonData, ComparisonValue } from "@/sections/types/comparison"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Box, Check, X } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Box, Check, X } from "lucide-react";
+interface Comparison1Props {
+    data: ComparisonData
+}
 
-// props: Comparison1Props 
-export default function Comparison1() {
+const iconMap = {
+    box: Box,
+}
+
+function renderValue(value: ComparisonValue) {
+    if (value.type === "boolean") {
+        return value.value ? (
+            <Check size={20} className="text-green-600" />
+        ) : (
+            <X size={20} className="text-red-600" />
+        )
+    }
+
+    return <p>{value.value}</p>
+}
+
+export default function Comparison1({ data }: Comparison1Props) {
+    const { eyebrow, headline, description, columns, rows, cta } = data
+
+    const primary = columns[0]
+    const secondary = columns[1]
+
+    const PrimaryIcon = primary.icon
+        ? iconMap[primary.icon as keyof typeof iconMap]
+        : null
+
+    const SecondaryIcon = secondary.icon
+        ? iconMap[secondary.icon as keyof typeof iconMap]
+        : null
+
     return (
         <div className="w-full border flex flex-col gap-y-12 items-center justify-center lg:py-50 py-30 lg:px-0 px-6">
             <div className="flex flex-col gap-y-5 text-center mx-auto">
-                <p className="text-muted-foreground lg:text-[14px]">Hero Section</p>
-                <h1 className="w-full lg:max-w-190 mx-auto lg:text-5xl text-3xl font-bold">Headline that shows comparison for user success</h1>
-                <p className="w-full lg:max-w-150 mx-auto text-muted-foreground lg:text-[18px]">
-                    Explain in one or two concise sentences how your solution compares to a competitor. Keep it clear and compelling.
-                </p>
+                {eyebrow && (
+                    <p className="text-muted-foreground lg:text-[14px]">
+                        {eyebrow}
+                    </p>
+                )}
+
+                <h1 className="w-full lg:max-w-190 mx-auto lg:text-5xl text-3xl font-bold">
+                    {headline}
+                </h1>
+
+                {description && (
+                    <p className="w-full lg:max-w-150 mx-auto text-muted-foreground lg:text-[18px]">
+                        {description}
+                    </p>
+                )}
             </div>
-            {/* desktop comparison ui */}
+
+            {/* Desktop */}
             <div className="w-325 lg:grid grid-cols-3 hidden">
-                {/* feature list */}
-                <div className="flex flex-col gap-y-0">
-                    <div className="flex items-center h-[56px] border-b"></div>
-                    <div className="flex items-center h-[56px] border-b">
-                        <p className="font-bold">Projects</p>
-                    </div>
-                    <div className="flex items-center h-[56px] border-b">
-                        <p className="font-bold">Custom components</p>
-                    </div>
-                    <div className="flex items-center h-[56px] border-b">
-                        <p className="font-bold">Design tokens</p>
-                    </div>
-                    <div className="flex items-center h-[56px] border-b">
-                        <p className="font-bold">Team permissions</p>
-                    </div>
-                    <div className="flex items-center h-[56px] border-b">
-                        <p className="font-bold">Audit logs</p>
-                    </div>
+                <div className="flex flex-col">
+                    <div className="h-[56px] border-b" />
+                    {rows.map((row, idx) => (
+                        <div key={idx} className="flex items-center h-[56px] border-b">
+                            <p className="font-bold">{row.label}</p>
+                        </div>
+                    ))}
                 </div>
 
-                {/* your feature checks */}
-                <div className="flex flex-col gap-y-0">
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <span className="w-7.5 h-7.5 flex items-center justify-center bg-neutral-950 dark:bg-neutral-900 rounded-md">💀</span>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p>Unlimitted</p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><Check size={'20'} className="text-green-600" /></p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><Check size={'20'} className="text-green-600" /></p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><Check size={'20'} className="text-green-600" /></p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><Check size={'20'} className="text-green-600" /></p>
-                    </div>
-                </div>
+                {[primary, secondary].map((col, colIdx) => {
+                    const Icon =
+                        colIdx === 0 ? PrimaryIcon : SecondaryIcon
 
-                {/* competitor feature checks */}
-                <div className="flex flex-col gap-y-0">
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <Box />
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p>10</p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><Check size={'20'} className="text-green-600" /></p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><Check size={'20'} className="text-green-600" /></p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><X size={'20'} className="text-red-600" /></p>
-                    </div>
-                    <div className="flex items-center justify-center h-[56px] border-b">
-                        <p className="font-bold"><X size={'20'} className="text-red-600" /></p>
-                    </div>
-                </div>
+                    return (
+                        <div key={col.id} className="flex flex-col">
+                            <div className="flex items-center justify-center h-[56px] border-b">
+                                {Icon ? <Icon /> : <span>{col.label}</span>}
+                            </div>
+
+                            {rows.map((row, rowIdx) => (
+                                <div
+                                    key={rowIdx}
+                                    className="flex items-center justify-center h-[56px] border-b"
+                                >
+                                    {renderValue(row.values[colIdx])}
+                                </div>
+                            ))}
+                        </div>
+                    )
+                })}
             </div>
 
-            {/* mobile comparison ui */}
+            {/* Mobile */}
             <div className="w-full lg:hidden flex flex-col gap-y-4">
-                {/* comparison header */}
-                <div className="w-full grid grid-cols-2">
+                <div className="grid grid-cols-2">
                     <div className="flex items-center justify-center h-[56px] border-b">
-                        <span className="w-7.5 h-7.5 flex items-center justify-center bg-neutral-950 dark:bg-neutral-900 rounded-md">💀</span>
+                        {PrimaryIcon ? <PrimaryIcon /> : primary.label}
                     </div>
                     <div className="flex items-center justify-center h-[56px] border-b">
-                        <Box />
+                        {SecondaryIcon ? <SecondaryIcon /> : secondary.label}
                     </div>
                 </div>
 
-                <Card className="pt-0">
-                    <div className="flex items-center h-[56px] border-b px-4">
-                        <p className="font-bold">Projects</p>
-                    </div>
-                    <div className="grid grid-cols-2">
-                        <div className="flex items-center justify-center h-[5px]">
-                            <p>Unlimitted</p>
+                {rows.map((row, idx) => (
+                    <Card key={idx} className="pt-0">
+                        <div className="flex items-center h-[56px] border-b px-4">
+                            <p className="font-bold">{row.label}</p>
                         </div>
-                        <div className="flex items-center justify-center h-[5px]">
-                            <p>2</p>
+                        <div className="grid grid-cols-2">
+                            <div className="flex items-center justify-center h-[56px]">
+                                {renderValue(row.values[0])}
+                            </div>
+                            <div className="flex items-center justify-center h-[56px]">
+                                {renderValue(row.values[1])}
+                            </div>
                         </div>
-                    </div>
-                </Card>
-                <Card className="pt-0">
-                    <div className="flex items-center h-[56px] border-b px-4">
-                        <p className="font-bold">Custom components</p>
-                    </div>
-                    <div className="grid grid-cols-2">
-                        <div className="flex items-center justify-center h-[5px]">
-                            <Check size={'20'} className="text-green-600" />
-                        </div>
-                        <div className="flex items-center justify-center h-[5px]">
-                            <Check size={'20'} className="text-green-600" />
-                        </div>
-                    </div>
-                </Card>
-                <Card className="pt-0">
-                    <div className="flex items-center h-[56px] border-b px-4">
-                        <p className="font-bold">Design tokens</p>
-                    </div>
-                    <div className="grid grid-cols-2">
-                        <div className="flex items-center justify-center h-[5px]">
-                            <Check size={'20'} className="text-green-600" />
-                        </div>
-                        <div className="flex items-center justify-center h-[5px]">
-                            <Check size={'20'} className="text-green-600" />
-                        </div>
-                    </div>
-                </Card>
-                <Card className="pt-0">
-                    <div className="flex items-center h-[56px] border-b px-4">
-                        <p className="font-bold">Team permissions</p>
-                    </div>
-                    <div className="grid grid-cols-2">
-                        <div className="flex items-center justify-center h-[5px]">
-                            <Check size={'20'} className="text-green-600" />
-                        </div>
-                        <div className="flex items-center justify-center h-[5px]">
-                            <X size={'20'} className="text-red-600" />
-                        </div>
-                    </div>
-                </Card>
-                <Card className="pt-0">
-                    <div className="flex items-center h-[56px] border-b px-4">
-                        <p className="font-bold">Audit logs</p>
-                    </div>
-                    <div className="grid grid-cols-2">
-                        <div className="flex items-center justify-center h-[5px]">
-                            <Check size={'20'} className="text-green-600" />
-                        </div>
-                        <div className="flex items-center justify-center h-[5px]">
-                            <X size={'20'} className="text-red-600" />
-                        </div>
-                    </div>
-                </Card>
+                    </Card>
+                ))}
             </div>
 
-            <Button>Get started</Button>
+            {cta && (
+                <Button asChild>
+                    <a href={cta.href}>{cta.label}</a>
+                </Button>
+            )}
         </div>
-    );
+    )
 }

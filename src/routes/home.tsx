@@ -1,6 +1,5 @@
 import { Seo } from "@/seo/seo"
 import { Section } from "@/sections/section"
-import Comparison1 from "@/components/site/comparison/comparison-1"
 import FAQ1 from "@/components/site/faq/faq-1"
 import Footer1 from "@/components/site/footer/footer-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
@@ -305,7 +304,70 @@ export default function Home() {
                 }}
             />
 
-            <Comparison1 />
+            <Section
+                type="comparison"
+                variant="1"
+                data={{
+                    eyebrow: "Comparison",
+                    headline: "Headline that shows comparison for user success",
+                    description:
+                        "Explain in one or two concise sentences how your solution compares to a competitor.",
+                    columns: [
+                        {
+                            id: "skelly",
+                            label: "Skelly",
+                            icon: "skull",
+                        },
+                        {
+                            id: "competitor",
+                            label: "Competitor",
+                            icon: "box",
+                        },
+                    ],
+                    rows: [
+                        {
+                            label: "Projects",
+                            values: [
+                                { type: "text", value: "Unlimited" },
+                                { type: "text", value: "10" },
+                            ],
+                        },
+                        {
+                            label: "Custom components",
+                            values: [
+                                { type: "boolean", value: true },
+                                { type: "boolean", value: true },
+                            ],
+                        },
+                        {
+                            label: "Design tokens",
+                            values: [
+                                { type: "boolean", value: true },
+                                { type: "boolean", value: true },
+                            ],
+                        },
+                        {
+                            label: "Team permissions",
+                            values: [
+                                { type: "boolean", value: true },
+                                { type: "boolean", value: false },
+                            ],
+                        },
+                        {
+                            label: "Audit logs",
+                            values: [
+                                { type: "boolean", value: true },
+                                { type: "boolean", value: false },
+                            ],
+                        },
+                    ],
+                    cta: {
+                        label: "Get started",
+                        href: "/signup",
+                    },
+                }}
+            />
+
             <Pricing1 />
             <FAQ1 />
             <LeadCapture1 />

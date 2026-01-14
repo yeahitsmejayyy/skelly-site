@@ -27,6 +27,9 @@ import type { WhoItsForData } from "@/sections/types/who-its-for"
 import SocialProof1 from "@/components/site/social-proof/social-proof-1"
 import type { SocialProofData } from "@/sections/types/social-proof"
 
+import Comparison1 from "@/components/site/comparison/comparison-1"
+import type { ComparisonData } from "@/sections/types/comparison"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -54,5 +57,8 @@ export const sectionRegistry = {
     },
     "social-proof": {
         "1": SocialProof1 satisfies SectionRenderer<SocialProofData>,
+    },
+    comparison: {
+        "1": Comparison1 satisfies SectionRenderer<ComparisonData>,
     },
 } as const
