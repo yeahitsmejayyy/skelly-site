@@ -4,7 +4,6 @@ import Comparison1 from "@/components/site/comparison/comparison-1"
 import FAQ1 from "@/components/site/faq/faq-1"
 import Features1 from "@/components/site/features/features-1"
 import Footer1 from "@/components/site/footer/footer-1"
-import HowItWorks1 from "@/components/site/how-it-works/how-it-works-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 import Pricing1 from "@/components/site/pricing/pricing-1"
 import SocialProof1 from "@/components/site/social-proof/social-proof-1"
@@ -156,7 +155,46 @@ export default function Home() {
                 }}
             />
 
-            <HowItWorks1 />
+            <Section
+                type="how-it-works"
+                variant="1"
+                data={{
+                    eyebrow: "How It Works",
+                    headline: "Headline that shows how it works for user success",
+                    description:
+                        "Explain in one or two concise sentences how your solution transforms users' challenges into positive outcomes.",
+                    steps: [
+                        {
+                            title: "Step 1",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                            image: {
+                                src: "/rectangle-placeholder.png",
+                                alt: "How it works step 1",
+                            },
+                        },
+                        {
+                            title: "Step 2",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                            image: {
+                                src: "/rectangle-placeholder.png",
+                                alt: "How it works step 2",
+                            },
+                        },
+                        {
+                            title: "Step 3",
+                            description:
+                                "Shortly describe how this feature solves a specific user problem.",
+                            image: {
+                                src: "/rectangle-placeholder.png",
+                                alt: "How it works step 3",
+                            },
+                        },
+                    ],
+                }}
+            />
+
             <Features1 />
             <WhoItsFor1 />
             <SocialProof1 />
