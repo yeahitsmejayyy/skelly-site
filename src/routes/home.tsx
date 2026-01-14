@@ -1,6 +1,5 @@
 import { Seo } from "@/seo/seo"
 import { Section } from "@/sections/section"
-import FAQ1 from "@/components/site/faq/faq-1"
 import Footer1 from "@/components/site/footer/footer-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 
@@ -446,7 +445,59 @@ export default function Home() {
                 }}
             />
 
-            <FAQ1 />
+            <Section
+                type="faq"
+                variant="1"
+                data={{
+                    eyebrow: "FAQ",
+                    headline: "Headline that shows frequently asked questions of users",
+                    description:
+                        "We've compiled the most important information to help you get the most out of your experience.",
+                    ctas: [
+                        {
+                            label: "Contact us",
+                            href: "/contact",
+                        },
+                        {
+                            label: "View documentation",
+                            href: "/docs",
+                        },
+                    ],
+                    items: [
+                        {
+                            question: "What is shadcn/ui kit for Figma?",
+                            answer:
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum hendrerit ex vitae sodales.",
+                        },
+                        {
+                            question: "What is shadcn/ui kit for Figma?",
+                            answer:
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum hendrerit ex vitae sodales.",
+                        },
+                        {
+                            question: "What is shadcn/ui kit for Figma?",
+                            answer:
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum hendrerit ex vitae sodales.",
+                        },
+                        {
+                            question: "What is shadcn/ui kit for Figma?",
+                            answer:
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum hendrerit ex vitae sodales.",
+                        },
+                        {
+                            question: "What is shadcn/ui kit for Figma?",
+                            answer:
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum hendrerit ex vitae sodales.",
+                        },
+                        {
+                            question: "What is shadcn/ui kit for Figma?",
+                            answer:
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum hendrerit ex vitae sodales.",
+                        },
+                    ],
+                }}
+            />
+
             <LeadCapture1 />
             <Footer1 />
         </div>

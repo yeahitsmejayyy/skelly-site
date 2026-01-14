@@ -33,6 +33,9 @@ import type { ComparisonData } from "@/sections/types/comparison"
 import Pricing1 from "@/components/site/pricing/pricing-1"
 import type { PricingData } from "@/sections/types/pricing"
 
+import FAQ1 from "@/components/site/faq/faq-1"
+import type { FAQData } from "@/sections/types/faq"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -66,5 +69,8 @@ export const sectionRegistry = {
     },
     pricing: {
         "1": Pricing1 satisfies SectionRenderer<PricingData>,
+    },
+    faq: {
+        "1": FAQ1 satisfies SectionRenderer<FAQData>,
     },
 } as const
