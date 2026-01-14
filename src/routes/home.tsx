@@ -3,7 +3,6 @@ import { Section } from "@/sections/section"
 import FAQ1 from "@/components/site/faq/faq-1"
 import Footer1 from "@/components/site/footer/footer-1"
 import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
-import Pricing1 from "@/components/site/pricing/pricing-1"
 
 // interface HomeProps {
 //   // define props here
@@ -368,7 +367,85 @@ export default function Home() {
                 }}
             />
 
-            <Pricing1 />
+            <Section
+                type="pricing"
+                variant="1"
+                data={{
+                    eyebrow: "Pricing",
+                    headline: "Headline that shows pricing for user success",
+                    description:
+                        "Add a concise value statement that addresses price sensitivity and showcases plan flexibility.",
+                    showBillingToggle: true,
+                    plans: [
+                        {
+                            id: "basic",
+                            name: "Basic",
+                            description:
+                                "A short benefit statement that highlights the ideal user for this tier.",
+                            price: {
+                                amount: "$29",
+                                interval: "month",
+                            },
+                            cta: {
+                                label: "Purchase plan",
+                                href: "/checkout/basic",
+                                variant: "secondary",
+                            },
+                            features: [
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                            ],
+                        },
+                        {
+                            id: "standard",
+                            name: "Standard",
+                            badge: "Most popular",
+                            highlighted: true,
+                            description:
+                                "A short benefit statement that highlights the ideal user for this tier.",
+                            price: {
+                                amount: "$49",
+                                interval: "month",
+                            },
+                            cta: {
+                                label: "Purchase plan",
+                                href: "/checkout/standard",
+                                variant: "default",
+                            },
+                            features: [
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                            ],
+                        },
+                        {
+                            id: "premium",
+                            name: "Premium",
+                            description:
+                                "A short benefit statement that highlights the ideal user for this tier.",
+                            price: {
+                                amount: "$99",
+                                interval: "month",
+                            },
+                            cta: {
+                                label: "Purchase plan",
+                                href: "/checkout/premium",
+                                variant: "secondary",
+                            },
+                            features: [
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                                { label: "Feature Name" },
+                            ],
+                        },
+                    ],
+                }}
+            />
+
             <FAQ1 />
             <LeadCapture1 />
             <Footer1 />

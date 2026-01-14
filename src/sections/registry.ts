@@ -30,6 +30,9 @@ import type { SocialProofData } from "@/sections/types/social-proof"
 import Comparison1 from "@/components/site/comparison/comparison-1"
 import type { ComparisonData } from "@/sections/types/comparison"
 
+import Pricing1 from "@/components/site/pricing/pricing-1"
+import type { PricingData } from "@/sections/types/pricing"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -60,5 +63,8 @@ export const sectionRegistry = {
     },
     comparison: {
         "1": Comparison1 satisfies SectionRenderer<ComparisonData>,
+    },
+    pricing: {
+        "1": Pricing1 satisfies SectionRenderer<PricingData>,
     },
 } as const
