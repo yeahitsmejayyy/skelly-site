@@ -36,6 +36,12 @@ import type { PricingData } from "@/sections/types/pricing"
 import FAQ1 from "@/components/site/faq/faq-1"
 import type { FAQData } from "@/sections/types/faq"
 
+import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
+import type { LeadCaptureData } from "@/sections/types/lead-capture"
+
+import Footer1 from "@/components/site/footer/footer-1"
+import type { FooterData } from "@/sections/types/footer"
+
 export const sectionRegistry = {
     nav: {
         "1": Nav1 satisfies SectionRenderer<NavData>,
@@ -72,5 +78,11 @@ export const sectionRegistry = {
     },
     faq: {
         "1": FAQ1 satisfies SectionRenderer<FAQData>,
+    },
+    "lead-capture": {
+        "1": LeadCapture1 satisfies SectionRenderer<LeadCaptureData>,
+    },
+    footer: {
+        "1": Footer1 satisfies SectionRenderer<FooterData>,
     },
 } as const

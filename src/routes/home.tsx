@@ -1,7 +1,5 @@
 import { Seo } from "@/seo/seo"
 import { Section } from "@/sections/section"
-import Footer1 from "@/components/site/footer/footer-1"
-import LeadCapture1 from "@/components/site/lead-capture/lead-capture-1"
 
 // interface HomeProps {
 //   // define props here
@@ -498,8 +496,80 @@ export default function Home() {
                 }}
             />
 
-            <LeadCapture1 />
-            <Footer1 />
+            <Section
+                type="lead-capture"
+                variant="1"
+                data={{
+                    eyebrow: "Get Started",
+                    headline: "Headline that shows frequently asked questions of users",
+                    description:
+                        "We've compiled the most important information to help you get the most out of your experience.",
+                    cta: {
+                        label: "Get started",
+                        href: "/signup",
+                    },
+                    image: {
+                        src: "/lead-capture-placeholder.png",
+                        alt: "Lead capture illustration",
+                    },
+                }}
+            />
+
+            <Section
+                type="footer"
+                variant="1"
+                data={{
+                    brand: {
+                        icon: "💀",
+                    },
+                    newsletter: {
+                        title: "Subscribe to our newsletter",
+                        description:
+                            "Get the latest news and updates from our team.",
+                        placeholder: "Enter your email",
+                        buttonLabel: "Subscribe",
+                    },
+                    groups: [
+                        {
+                            title: "Company",
+                            links: [
+                                { label: "About Us", href: "/about" },
+                                { label: "Blog", href: "/blog" },
+                                { label: "Careers", href: "/careers" },
+                                { label: "Partners", href: "/partners" },
+                                { label: "Contact", href: "/contact" },
+                            ],
+                        },
+                        {
+                            title: "Resources",
+                            links: [
+                                { label: "Guides", href: "/guides" },
+                                { label: "Tutorials", href: "/tutorials" },
+                                { label: "FAQ", href: "/faq" },
+                                { label: "Downloads", href: "/downloads" },
+                                { label: "Support", href: "/support" },
+                            ],
+                        },
+                        {
+                            title: "Account",
+                            links: [
+                                { label: "Your Account", href: "/account" },
+                                { label: "Settings", href: "/settings" },
+                                { label: "Accessibility", href: "/accessibility" },
+                                { label: "Terms", href: "/terms" },
+                            ],
+                        },
+                    ],
+                    copyright:
+                        "Copyright © 2026 skellyui.com. All rights reserved.",
+                    metaLinks: [
+                        { label: "Privacy Policy", href: "/privacy" },
+                        { label: "Terms of Service", href: "/terms" },
+                        { label: "Cookie Settings", href: "#" },
+                    ],
+                }}
+            />
+
         </div>
     );
 }
