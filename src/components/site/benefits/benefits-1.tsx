@@ -1,8 +1,8 @@
-import type { BenefitsData } from "@/sections/types/benefits"
+import type { Benefits1Data } from "@/sections/types/benefits/benefits-1"
 import { Check } from "lucide-react"
 
 interface Benefits1Props {
-    data: BenefitsData
+    data: Benefits1Data
 }
 
 export default function Benefits1({ data }: Benefits1Props) {

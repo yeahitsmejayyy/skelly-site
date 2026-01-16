@@ -1,11 +1,11 @@
-import type { NavData } from "@/sections/types/nav"
+import type { Nav1Data } from "@/sections/types/nav/nav-1"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
 interface Nav1Props {
-    data: NavData
+    data: Nav1Data
 }
 
 export default function Nav1({ data }: Nav1Props) {

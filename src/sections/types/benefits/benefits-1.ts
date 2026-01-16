@@ -1,12 +1,12 @@
-export interface BenefitItem {
+export interface Benefit1Item {
     title: string
     description?: string
 }
 
-export interface BenefitsData {
+export interface Benefits1Data {
     eyebrow?: string
     headline: string
     description?: string
 
-    items: BenefitItem[]
+    items: Benefit1Item[]
 }

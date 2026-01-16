@@ -1,4 +1,4 @@
-import type { PricingData } from "@/sections/types/pricing"
+import type { Pricing1Data } from "@/sections/types/pricing/pricing-1"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch"
 import { Check, Info } from "lucide-react"
 
 interface Pricing1Props {
-    data: PricingData
+    data: Pricing1Data
 }
 
 export default function Pricing1({ data }: Pricing1Props) {

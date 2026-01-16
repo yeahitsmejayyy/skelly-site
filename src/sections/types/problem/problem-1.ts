@@ -1,4 +1,4 @@
-export interface SolutionData {
+export interface Problem1Data {
     eyebrow?: string
     headline: string
     description?: string

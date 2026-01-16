@@ -1,8 +1,8 @@
-import type { SocialProofData } from "@/sections/types/social-proof"
+import type { SocialProof1Data } from "@/sections/types/social-proof/social-proof-1"
 import { Card } from "@/components/ui/card"
 
 interface SocialProof1Props {
-    data: SocialProofData
+    data: SocialProof1Data
 }
 
 export default function SocialProof1({ data }: SocialProof1Props) {

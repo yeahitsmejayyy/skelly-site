@@ -1,9 +1,9 @@
-import type { SolutionData } from "@/sections/types/solution"
+import type { Solution1Data } from "@/sections/types/solution/solution-1"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check } from "lucide-react"
 
 interface Solution1Props {
-    data: SolutionData
+    data: Solution1Data
 }
 
 export default function Solution1({ data }: Solution1Props) {

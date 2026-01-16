@@ -1,8 +1,8 @@
-import type { FeaturesData } from "@/sections/types/features"
+import type { Features1Data } from "@/sections/types/features/features-1"
 import { Rocket } from "lucide-react"
 
 interface Features1Props {
-    data: FeaturesData
+    data: Features1Data
 }
 
 const iconMap = {

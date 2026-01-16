@@ -1,17 +1,17 @@
-import type { ComparisonData, ComparisonValue } from "@/sections/types/comparison"
+import type { Comparison1Data, Comparison1Value } from "@/sections/types/comparison/comparison-1"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Box, Check, X } from "lucide-react"
 
 interface Comparison1Props {
-    data: ComparisonData
+    data: Comparison1Data
 }
 
 const iconMap = {
     box: Box,
 }
 
-function renderValue(value: ComparisonValue) {
+function renderValue(value: Comparison1Value) {
     if (value.type === "boolean") {
         return value.value ? (
             <Check size={20} className="text-green-600" />

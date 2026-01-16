@@ -1,9 +1,9 @@
-import type { FAQData } from "@/sections/types/faq"
+import type { FAQ1Data } from "@/sections/types/faq/faq-1"
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
 
 interface FAQ1Props {
-    data: FAQData
+    data: FAQ1Data
 }
 
 export default function FAQ1({ data }: FAQ1Props) {

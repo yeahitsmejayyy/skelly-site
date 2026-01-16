@@ -1,9 +1,9 @@
-import type { LeadCaptureData } from "@/sections/types/lead-capture"
+import type { LeadCapture1Data } from "@/sections/types/lead-capture/lead-capture-1"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 interface LeadCapture1Props {
-    data: LeadCaptureData
+    data: LeadCapture1Data
 }
 
 export default function LeadCapture1({ data }: LeadCapture1Props) {

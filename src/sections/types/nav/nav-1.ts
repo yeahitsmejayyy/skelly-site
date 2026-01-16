@@ -1,16 +1,16 @@
-export interface NavItem {
+export interface Nav1Item {
     label: string
     href: string
 }
 
-export interface NavData {
+export interface Nav1Data {
     brand?: {
         label?: string
         icon?: string
         href?: string
     }
 
-    links: NavItem[]
+    links: Nav1Item[]
 
     cta?: {
         label: string

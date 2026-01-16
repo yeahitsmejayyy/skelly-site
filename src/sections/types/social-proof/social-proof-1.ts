@@ -1,4 +1,4 @@
-export interface Testimonial {
+export interface Testimonial1 {
     quote: string
 
     author: {
@@ -11,10 +11,10 @@ export interface Testimonial {
     }
 }
 
-export interface SocialProofData {
+export interface SocialProof1Data {
     eyebrow?: string
     headline: string
     description?: string
 
-    testimonials: Testimonial[]
+    testimonials: Testimonial1[]
 }

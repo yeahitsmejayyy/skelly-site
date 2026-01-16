@@ -1,7 +1,7 @@
-import type { HowItWorksData } from "@/sections/types/how-it-works"
+import type { HowItWorks1Data } from "@/sections/types/how-it-works/how-it-works-1"
 
 interface HowItWorks1Props {
-    data: HowItWorksData
+    data: HowItWorks1Data
 }
 
 export default function HowItWorks1({ data }: HowItWorks1Props) {

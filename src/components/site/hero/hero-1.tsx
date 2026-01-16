@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import type { HeroData } from "@/sections/types/hero"
+import type { Hero1Data } from "@/sections/types/hero/hero-1"
 
 interface Hero1Props {
-    data: HeroData
+    data: Hero1Data
 }
 
 export default function Hero1({ data }: Hero1Props) {

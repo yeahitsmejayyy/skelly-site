@@ -1,9 +1,9 @@
-import type { WhoItsForData } from "@/sections/types/who-its-for"
+import type { WhoItsFor1Data } from "@/sections/types/who-its-for/who-its-for-1"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 interface WhoItsFor1Props {
-    data: WhoItsForData
+    data: WhoItsFor1Data
 }
 
 export default function WhoItsFor1({ data }: WhoItsFor1Props) {

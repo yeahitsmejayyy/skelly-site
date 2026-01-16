@@ -1,9 +1,9 @@
-export interface PricingFeature {
+export interface Pricing1Feature {
     label: string
     tooltip?: string
 }
 
-export interface PricingPlan {
+export interface Pricing1Plan {
     id: string
     name: string
     description?: string
@@ -22,15 +22,15 @@ export interface PricingPlan {
         variant?: "default" | "secondary"
     }
 
-    features: PricingFeature[]
+    features: Pricing1Feature[]
 }
 
-export interface PricingData {
+export interface Pricing1Data {
     eyebrow?: string
     headline: string
     description?: string
 
     showBillingToggle?: boolean
 
-    plans: PricingPlan[]
+    plans: Pricing1Plan[]
 }

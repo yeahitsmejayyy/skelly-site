@@ -1,4 +1,4 @@
-export interface HowItWorksStep {
+export interface HowItWorks1Step {
     title: string
     description?: string
     image?: {
@@ -7,10 +7,10 @@ export interface HowItWorksStep {
     }
 }
 
-export interface HowItWorksData {
+export interface HowItWorks1Data {
     eyebrow?: string
     headline: string
     description?: string
 
-    steps: HowItWorksStep[]
+    steps: HowItWorks1Step[]
 }

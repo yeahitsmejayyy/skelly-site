@@ -1,9 +1,9 @@
-import type { ProblemData } from "@/sections/types/problem"
+import type { Problem1Data } from "@/sections/types/problem/problem-1"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check } from "lucide-react"
 
 interface Problem1Props {
-    data: ProblemData
+    data: Problem1Data
 }
 
 export default function Problem1({ data }: Problem1Props) {

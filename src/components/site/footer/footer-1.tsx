@@ -1,10 +1,10 @@
-import type { FooterData } from "@/sections/types/footer"
+import type { Footer1Data } from "@/sections/types/footer/footer-1"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 
 interface Footer1Props {
-    data: FooterData
+    data: Footer1Data
 }
 
 export default function Footer1({ data }: Footer1Props) {

@@ -1,19 +1,19 @@
-export interface FAQItem {
+export interface FAQ1Item {
     question: string
     answer: string
 }
 
-export interface FAQCta {
+export interface FAQ1Cta {
     label: string
     href: string
 }
 
-export interface FAQData {
+export interface FAQ1Data {
     eyebrow?: string
     headline: string
     description?: string
 
-    ctas?: FAQCta[]
+    ctas?: FAQ1Cta[]
 
-    items: FAQItem[]
+    items: FAQ1Item[]
 }
