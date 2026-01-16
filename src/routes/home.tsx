@@ -373,15 +373,23 @@ export default function Home() {
                     description:
                         "Add a concise value statement that addresses price sensitivity and showcases plan flexibility.",
                     showBillingToggle: true,
+                    defaultBilling: "monthly",
                     plans: [
                         {
                             id: "basic",
                             name: "Basic",
                             description:
                                 "A short benefit statement that highlights the ideal user for this tier.",
-                            price: {
-                                amount: "$29",
-                                interval: "month",
+                            prices: {
+                                monthly: {
+                                    amount: "$29",
+                                    interval: "month",
+                                },
+                                annually: {
+                                    amount: "$290",
+                                    interval: "year",
+                                    note: "Save 17%",
+                                },
                             },
                             cta: {
                                 label: "Purchase plan",
@@ -401,9 +409,16 @@ export default function Home() {
                             highlighted: true,
                             description:
                                 "A short benefit statement that highlights the ideal user for this tier.",
-                            price: {
-                                amount: "$49",
-                                interval: "month",
+                            prices: {
+                                monthly: {
+                                    amount: "$49",
+                                    interval: "month",
+                                },
+                                annually: {
+                                    amount: "$490",
+                                    interval: "year",
+                                    note: "Save 17%",
+                                },
                             },
                             cta: {
                                 label: "Purchase plan",
@@ -422,9 +437,16 @@ export default function Home() {
                             name: "Premium",
                             description:
                                 "A short benefit statement that highlights the ideal user for this tier.",
-                            price: {
-                                amount: "$99",
-                                interval: "month",
+                            prices: {
+                                monthly: {
+                                    amount: "$99",
+                                    interval: "month",
+                                },
+                                annually: {
+                                    amount: "$990",
+                                    interval: "year",
+                                    note: "Save 17%",
+                                },
                             },
                             cta: {
                                 label: "Purchase plan",
@@ -442,6 +464,7 @@ export default function Home() {
                     ],
                 }}
             />
+
 
             <Section
                 type="faq"

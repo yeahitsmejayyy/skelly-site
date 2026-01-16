@@ -1,3 +1,4 @@
+import { useState } from "react"
 import type { Pricing1Data } from "@/sections/types/pricing/pricing-1"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -15,8 +16,12 @@ export default function Pricing1({ data }: Pricing1Props) {
         headline,
         description,
         showBillingToggle,
+        defaultBilling = "monthly",
         plans,
     } = data
+
+    const [billing, setBilling] =
+        useState<"monthly" | "annually">(defaultBilling)
 
     return (
         <div className="w-full border flex flex-col gap-y-10 items-center justify-center lg:py-50 py-30 lg:px-0 px-6">
@@ -38,75 +43,110 @@ export default function Pricing1({ data }: Pricing1Props) {
                 )}
 
                 {showBillingToggle && (
-                    <div className="flex items-center gap-x-2 mx-auto mt-5">
-                        <p>Monthly</p>
-                        <Switch />
-                        <p>Annually</p>
+                    <div className="flex items-center gap-x-3 mx-auto mt-5">
+                        <p
+                            className={
+                                billing === "monthly"
+                                    ? "font-medium"
+                                    : "text-muted-foreground"
+                            }
+                        >
+                            Monthly
+                        </p>
+
+                        <Switch
+                            checked={billing === "annually"}
+                            onCheckedChange={(checked) =>
+                                setBilling(checked ? "annually" : "monthly")
+                            }
+                        />
+
+                        <p
+                            className={
+                                billing === "annually"
+                                    ? "font-medium"
+                                    : "text-muted-foreground"
+                            }
+                        >
+                            Annually
+                        </p>
                     </div>
                 )}
             </div>
 
             <div className="lg:w-325 grid lg:grid-cols-3 grid-cols-1 gap-8">
-                {plans.map(plan => (
-                    <Card
-                        key={plan.id}
-                        className={[
-                            "p-[32px] flex flex-col gap-y-4",
-                            plan.highlighted
-                                ? "border-2 border-neutral-950"
-                                : "",
-                        ].join(" ")}
-                    >
-                        <div className="flex items-center justify-between">
-                            <p className="text-[18px] font-semibold">
-                                {plan.name}
-                            </p>
-                            {plan.badge && <Badge>{plan.badge}</Badge>}
-                        </div>
+                {plans.map((plan) => {
+                    const price = plan.prices[billing]
 
-                        {plan.description && (
-                            <p className="text-muted-foreground">
-                                {plan.description}
-                            </p>
-                        )}
-
-                        <div className="flex items-end gap-x-1">
-                            <p className="text-4xl font-bold">
-                                {plan.price.amount}
-                            </p>
-                            <small className="text-[16px] text-muted-foreground">
-                                /{plan.price.interval}
-                            </small>
-                        </div>
-
-                        <Button
-                            size="lg"
-                            variant={plan.cta.variant ?? "secondary"}
-                            asChild
+                    return (
+                        <Card
+                            key={plan.id}
+                            className={[
+                                "p-[32px] flex flex-col gap-y-4",
+                                plan.highlighted
+                                    ? "border-2 border-neutral-950"
+                                    : "",
+                            ].join(" ")}
                         >
-                            <a href={plan.cta.href}>{plan.cta.label}</a>
-                        </Button>
-
-                        <p className="font-semibold">
-                            What&apos;s included:
-                        </p>
-
-                        {plan.features.map((feature, idx) => (
-                            <div
-                                key={idx}
-                                className="flex items-center justify-between"
-                            >
-                                <div className="flex items-center gap-x-2">
-                                    <Check size={20} />
-                                    <p>{feature.label}</p>
-                                </div>
-                                {feature.tooltip && (
-                                    <Info className="text-muted-foreground" />
-                                )}
+                            <div className="flex items-center justify-between">
+                                <p className="text-[18px] font-semibold">
+                                    {plan.name}
+                                </p>
+                                {plan.badge && <Badge>{plan.badge}</Badge>}
                             </div>
-                        ))}
-                    </Card>
-                ))}
+
+                            {plan.description && (
+                                <p className="text-muted-foreground">
+                                    {plan.description}
+                                </p>
+                            )}
+
+                            <div className="flex items-end gap-x-1">
+                                <p className="text-4xl font-bold">
+                                    {price.amount}
+                                </p>
+                                <small className="text-[16px] text-muted-foreground">
+                                    /{price.interval}
+                                </small>
+                            </div>
+
+                            {price.note && (
+                                <p className="text-sm text-muted-foreground">
+                                    {price.note}
+                                </p>
+                            )}
+
+                            <Button
+                                size="lg"
+                                variant={plan.cta.variant ?? "secondary"}
+                                asChild
+                            >
+                                <a href={plan.cta.href}>
+                                    {plan.cta.label}
+                                </a>
+                            </Button>
+
+                            <p className="font-semibold">
+                                What&apos;s included:
+                            </p>
+
+                            {plan.features.map((feature, idx) => (
+                                <div
+                                    key={idx}
+                                    className="flex items-center justify-between"
+                                >
+                                    <div className="flex items-center gap-x-2">
+                                        <Check size={20} />
+                                        <p>{feature.label}</p>
+                                    </div>
+                                    {feature.tooltip && (
+                                        <Info className="text-muted-foreground" />
+                                    )}
+                                </div>
+                            ))}
+                        </Card>
+                    )
+                })}
             </div>
         </div>
     )

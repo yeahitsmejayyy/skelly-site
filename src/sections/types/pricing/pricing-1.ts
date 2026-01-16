@@ -3,14 +3,20 @@ export interface Pricing1Feature {
     tooltip?: string
 }
 
+export interface Pricing1Price {
+    amount: string
+    interval: string
+    note?: string
+}
+
 export interface Pricing1Plan {
     id: string
     name: string
     description?: string
 
-    price: {
-        amount: string
-        interval: string
+    prices: {
+        monthly: Pricing1Price
+        annually: Pricing1Price
     }
 
     highlighted?: boolean
@@ -31,6 +37,7 @@ export interface Pricing1Data {
     description?: string
 
     showBillingToggle?: boolean
+    defaultBilling?: "monthly" | "annually"
 
     plans: Pricing1Plan[]
 }
