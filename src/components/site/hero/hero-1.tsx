@@ -10,7 +10,7 @@ export default function Hero1({ data }: Hero1Props) {
     const { eyebrow, headline, description, cta } = data
 
     return (
-        <div className="w-full border flex items-center justify-center lg:py-50 py-30 lg:px-0 px-6">
+        <div className="w-full flex items-center justify-center lg:py-50 py-30 lg:px-0 px-6">
             <div className="w-full flex flex-col gap-y-5 text-center mx-auto">
                 {eyebrow && (
                     <p className="text-muted-foreground lg:text-[14px]">

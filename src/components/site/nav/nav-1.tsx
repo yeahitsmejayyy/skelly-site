@@ -2,6 +2,8 @@ import type { Nav1Data } from "@/sections/types/nav/nav-1"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ToggleEditMode } from "@/components/edit-mode/toggle-edit-mode"
+
 import { Menu } from "lucide-react"
 
 interface Nav1Props {
@@ -12,7 +14,7 @@ export default function Nav1({ data }: Nav1Props) {
     const { brand, links, cta } = data
 
     return (
-        <div className="fixed right-0 left-0 lg:top-4 top-0 w-full h-16.25 max-w-215 mx-auto px-5 flex items-center justify-between lg:bg-background/60 bg-background/85 backdrop-blur-md backdrop-saturate-150
+        <div className="fixed right-0 left-0 lg:top-10 top-0 w-full h-16.25 max-w-215 mx-auto px-5 flex items-center justify-between lg:bg-background/60 bg-background/85 backdrop-blur-md backdrop-saturate-150
 border border-border/50
 lg:rounded-lg lg:shadow-lg">
             <div className="flex items-center gap-1">
@@ -44,8 +46,9 @@ lg:rounded-lg lg:shadow-lg">
                     )}
                 </div>
 
-                <div className="lg:block hidden">
+                <div className="lg:flex lg:items-center lg:gap-x-2 hidden">
                     <ModeToggle />
+                    <ToggleEditMode />
                 </div>
 
                 <div className="lg:hidden block">
