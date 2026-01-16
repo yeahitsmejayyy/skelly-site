@@ -13,7 +13,7 @@ export default function Nav1({ data }: Nav1Props) {
     const { brand, links, cta } = data
 
     return (
-        <div className="fixed right-0 left-0 lg:top-10 top-0 w-full h-16.25 max-w-215 mx-auto px-5 flex items-center justify-between lg:bg-background/60 bg-background/85 backdrop-blur-md backdrop-saturate-150
+        <div className="fixed right-0 left-0 lg:top-10 top-0 w-full h-16.25 max-w-325 mx-auto px-5 flex items-center justify-between lg:bg-background/60 bg-background/85 backdrop-blur-md backdrop-saturate-150
 border border-border/50
 lg:rounded-lg lg:shadow-lg">
             <div className="flex items-center gap-1">
