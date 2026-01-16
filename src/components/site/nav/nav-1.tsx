@@ -2,7 +2,6 @@ import type { Nav1Data } from "@/sections/types/nav/nav-1"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { ToggleEditMode } from "@/components/edit-mode/toggle-edit-mode"
 
 import { Menu } from "lucide-react"
 
@@ -48,7 +47,6 @@ lg:rounded-lg lg:shadow-lg">
 
                 <div className="lg:flex lg:items-center lg:gap-x-2 hidden">
                     <ModeToggle />
-                    <ToggleEditMode />
                 </div>
 
                 <div className="lg:hidden block">

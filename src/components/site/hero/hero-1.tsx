@@ -29,8 +29,10 @@ export default function Hero1({ data }: Hero1Props) {
                 )}
 
                 {cta && (
-                    <Button className="w-fit mx-auto" size="lg">
-                        {cta.label} <ArrowRight />
+                    <Button className="w-fit mx-auto" size="lg" asChild>
+                        <a href={cta.href}>
+                            {cta.label} <ArrowRight />
+                        </a>
                     </Button>
                 )}
             </div>
